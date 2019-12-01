@@ -1,0 +1,40 @@
+*{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+body{
+    background-color: #eee2dc;
+}
+
+img {
+    width: 180px;
+    height: 180x;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 720px;
+    height: 720px;
+    border-collapse: collapse;
+}
+
+tr{
+    width: auto;
+    height: auto;
+
+    border-spacing: 0px;
+    
+}
+td{
+    margin-left: auto;
+    margin-right: auto;
+    
+
+
+}

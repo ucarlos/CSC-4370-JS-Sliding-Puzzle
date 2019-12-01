@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Project 3 </title>
+    <meta charset="utf-8"/>
+    <link href="./css/main.css" rel="stylesheet" type="text/css">
+    <script src="./js/main.js"></script>
+
+
+    </head>
+    <h1>Project 3: Sliding Game</h1>
+    <body>
+        <!-- Javascript to display music -->
+        <audio id="music" hidden autoplay>      
+        </audio>
+
+        <table id="image_table">
+                <tr>
+                    <td><img src="images/cover.jpg"></td>
+                    <td><img src="images/cover.jpg"></td>
+                    <td><img src="images/cover.jpg"></td>
+                    <td><img src="images/cover.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img src="images/cover.jpg"></td>
+                    <td><img src="images/cover.jpg"></td>
+                    <td><img src="images/cover.jpg"></td>
+                    <td><img src="images/cover.jpg"></td>
+                </tr>
+                <tr>
+                    <td><img src="images/cover.jpg"></td>
+                    <td><img src="images/cover.jpg"></td>
+                    <td><img src="images/cover.jpg"></td>
+                    <td><img src="images/cover.jpg"></td>
+                    </tr>
+                <tr>
+                    <td><img src="images/cover.jpg"></td>
+                    <td><img src="images/cover.jpg"></td>
+                    <td><img src="images/cover.jpg"></td>
+                    <td><img src="images/cover.jpg"></td>
+                </tr>                               
+        </table>
+        <button id="start" onclick="initialize_current_image()">Game START!</button><br>
+        <button id="difficulty" onclick="enter_difficulty()">Set the difficulty!</button>
+        <button id="solve" onclick="solve_for_me()">Solve it  for Me!</button>
+        <!-- Script to display music.-->
+        <script>
+            function rand_int(min, max) {
+                return Math.floor(Math.random() * (max - min ) ) + min;
+            }
+
+            function play_random_music(){
+                var music_list = ["./music/song01.mp3", "./music/song02.mp3", "./music/song03.mp3",
+                "./music/song04.mp3", "./music/song05.mp3", "./music/song06.mp3", "./music/song07.mp3",
+            "./music/song08.mp3", "./music/song09.mp3"];
+ 
+                var random = rand_int(0, music_list.length);
+                var source = document.createElement("source");
+                source.setAttribute("src", music_list[random]);
+                source.setAttribute("type", "audio/mpeg");
+                var audio = document.getElementById("music");
+                audio.appendChild(source);            
+
+            }
+            play_random_music();
+        </script>
+        
+    </body>
+</html>
+
